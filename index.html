@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<script>
+		async function ping() {
+			const response = await fetch('http://localhost:4000/ping')
+			const result = await response.text()
+			document.getElementById('server-response').textContent = result
+		}
+	</script>
+	<body>
+		<button onclick='ping()'>Click me to ping the server!</button>
+		<div>Server Response: <span id='server-response'></span></div>
+	</body>
+</html>
